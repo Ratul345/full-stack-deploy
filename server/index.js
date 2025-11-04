@@ -10,7 +10,17 @@ const port = 4000;
 app.use(express.json());
 
 // Use the CORS middleware to enable Cross-Origin Resource Sharing
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "http://localhost:3000",
+      // add production url here
+    ],
+    credentials: true,
+  })
+);
 
 // Define a route handler for the root URL ("/")
 app.get("/api/message", (req, res) => {
@@ -21,6 +31,6 @@ app.get("/api/message", (req, res) => {
 });
 
 // Start the server and listen on the specified port
-app.listen(port, () => {
+app.listen(port, "0.0.0.0",  () => {
   console.log(`Server is Running at http://localhost:${port}`);
 });
