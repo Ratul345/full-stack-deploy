@@ -16,7 +16,7 @@ app.use(cors());
 app.get("/api/message", (req, res) => {
   res.json({
     message:
-      "Hello from Sajjad! Full Stack Deployment course server is running successfully. Course chaicode: https://www.youtube.com/watch?v=vzVbqXVID-Y",
+      "Full Stack Deployment course server is running successfully. Course chaicode: https://www.youtube.com/watch?v=vzVbqXVID-Y",
   });
 });
 
