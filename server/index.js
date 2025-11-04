@@ -14,7 +14,10 @@ app.use(cors());
 
 // Define a route handler for the root URL ("/")
 app.get("/api/message", (req, res) => {
-  res.json({ message: "Hello from chaicode server!" });
+  res.json({
+    message:
+      "Hello from ratul! Full Stack Deployment course server is running successfully. Course chaicode: https://www.youtube.com/watch?v=vzVbqXVID-Y",
+  });
 });
 
 // Start the server and listen on the specified port
