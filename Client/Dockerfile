@@ -19,6 +19,7 @@ FROM node:22-alpine
 WORKDIR /app
 
 RUN npm install -g serve
+ENV PATH="/usr/local/bin:$PATH"
 
 COPY --from=build /app/dist ./dist
 
